@@ -37,3 +37,5 @@ For example:
 USERNAME=bobbytables@pam!readonly
 API_TOKEN=aabbccdd-d34d-b33f-1010-fafaddf12345
 ```
+
+Ensure the device running YARTICATED is allowed to send traffic to the target node's management port (8006 by default.)

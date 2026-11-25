@@ -7,6 +7,9 @@ load_dotenv()
 USERNAME = os.getenv("USERNAME")
 API_TOKEN = os.getenv("API_TOKEN")
 
+if not USERNAME or USERNAME.count("@") != 1 or USERNAME.count("!") != 1:
+    raise Exception("No valid USERNAME found. Format: USERNAME={USERNAME}@{REALM}!{TOKEN_ID}")
+
 if not API_TOKEN:
     raise Exception("No API_TOKEN found. Is your .env file missing?")
 
@@ -38,7 +41,7 @@ def main():
     node_mini = Requester("https://mini.chammas.tech:8006/api2/json")
 
     resources = node_mini.get_resources()   
-    print(f"{resources.text=}, {resources.status_code=}")
+    print(json.dumps(resources.json(), indent=2))
 
 if __name__ == "__main__":
     main()

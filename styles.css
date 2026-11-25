@@ -1,0 +1,31 @@
+/* Palette https://coolors.co/1e1e24-92140c-fff8f0-ffcf99-111d4a */
+
+body {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: Arial, sans-serif;
+    color: #fff8f0;
+    background: #1e1e24;
+}
+
+table {
+    width: 100%;
+    background: #1e1e24;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #92140c;
+}
+
+.online {
+    color: #0daa47;
+}
+
+.offline {
+    color: #d91b1b;
+    font-weight: bold;
+}
